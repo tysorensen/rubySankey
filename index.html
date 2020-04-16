@@ -11,10 +11,24 @@
 
 
 <body>
+
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+ <!-- <div>
+  <center><img alt="Bootstrap Image Preview" src="Ruby_Logo®_RGB_Rogers.png" class="centerImage"></center>
+  <br>
+  <center><h1>
+    <b>Ruby Lead Mapping - Q1-2020</b>
+  </h1></center>
+  <br>
+  <center><h3>
+    Data is pulled from Jan 1, 2020 - April 15, 2020. All leads with null Industries were removed. 
+  </h3></center>
+</div> -->
 
 
   <div id="sankey_multiple" style="width: 1800px; height: 6000px;" ></div>
+
 
 <script type="text/javascript">
   google.charts.load("current", {packages:["sankey"]});
@@ -712,13 +726,12 @@
     var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
     chart.draw(data, options);
 
-    var chartcontain = document.getElementsByTagName('svg')[0].setAttribute("height", "4500");
+    var chartcontain = document.getElementsByTagName('svg')[0].setAttribute("height", "4700");
 
     console.log("This is post-change");
 
    }
 </script>
-
 
 </body>
 </html>
