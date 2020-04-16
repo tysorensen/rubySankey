@@ -1,8 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Ruby Q1-2020 Sankey</title>
+
+    <link href="static/css/style.css" rel="stylesheet">
+
+
+  </head>
+
+
 <body>
  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<div id="sankey_multiple" style="width: 1800px; height: 2500px;"></div>
+
+  <div id="sankey_multiple" style="width: 1800px; height: 6000px;" ></div>
 
 <script type="text/javascript">
   google.charts.load("current", {packages:["sankey"]});
@@ -688,15 +700,25 @@
     // Set chart options
     var options = {
       width: 1800,
-      height: 1500
+      height: 2500,
+      sankey: {
+        height: 4000,
+      }
     };
+
+    console.log("This is pre-change");
 
     // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
-    // chart.draw(data, options);
-    chart.draw(data);
+    chart.draw(data, options);
+
+    var chartcontain = document.getElementsByTagName('svg')[0].setAttribute("height", "4500");
+
+    console.log("This is post-change");
+
    }
 </script>
+
 
 </body>
 </html>
